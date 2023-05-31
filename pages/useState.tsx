@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Confirm from "@/components/Confirm";
 import Button from "@/components/Button";
+import Portal from "@/components/Portal";
 import styled from "styled-components";
 
 const UseState = () => {
@@ -19,12 +20,14 @@ const UseState = () => {
     <Wrapper>
       <Button onClick={open}>Open Confirm</Button>
       {isOpen && (
-        <Confirm
-          title="알림"
-          message="상품을 주문하시겠습니까?"
-          close={close}
-          confirm={confirm}
-        ></Confirm>
+        <Portal>
+          <Confirm
+            title="알림"
+            message="상품을 주문하시겠습니까?"
+            close={close}
+            confirm={confirm}
+          ></Confirm>
+        </Portal>
       )}
     </Wrapper>
   );

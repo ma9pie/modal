@@ -1,3 +1,5 @@
+/* @/components/Confirm.tsx */
+
 import React from "react";
 import styled from "styled-components";
 
@@ -19,7 +21,7 @@ const Confirm = ({ title, message, close, confirm }: Props) => {
         </Top>
         <Message>{message}</Message>
         <BtnContainer>
-          <CancleBtn onClick={close}>cancle</CancleBtn>
+          <CancelBtn onClick={close}>cancel</CancelBtn>
           <ConfirmBtn onClick={confirm}>confirm</ConfirmBtn>
         </BtnContainer>
       </Content>
@@ -72,7 +74,7 @@ const BtnContainer = styled.div`
   display: flex;
   gap: 8px;
 `;
-const CancleBtn = styled.div`
+const CancelBtn = styled.div`
   flex: 1;
   height: 24px;
   text-align: center;
