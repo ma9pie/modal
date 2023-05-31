@@ -1,20 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import Confirm from "@/components/Confirm";
 import Button from "@/components/Button";
 import Portal from "@/components/Portal";
 import styled from "styled-components";
+import useModal from "@/hooks/useModal";
 
-const UseState = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const open = () => {
-    setIsOpen(true);
-  };
-  const close = () => {
-    setIsOpen(false);
-  };
+const Page = () => {
+  const { isOpen, open, close } = useModal();
+
   const confirm = () => {
     console.log("confirm clicked");
-    setIsOpen(false);
+    close();
   };
   return (
     <Wrapper>
@@ -33,7 +29,7 @@ const UseState = () => {
   );
 };
 
-export default UseState;
+export default Page;
 
 const Wrapper = styled.div`
   width: 100vw;
