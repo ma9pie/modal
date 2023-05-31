@@ -24,5 +24,8 @@
     "sass": "^1.62.1",
     "styled-components": "^5.3.11",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
   }
 }
