@@ -2,11 +2,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "@/redux/store";
-
-export type ModalProps = {
-  key?: string;
-  component?: () => JSX.Element;
-};
+import { ModalProps } from "@/types";
 
 const initialState: ModalProps[] = [];
 

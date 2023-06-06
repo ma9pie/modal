@@ -1,7 +1,8 @@
 /* @/hooks/useRecoilModal.tsx */
 
 import { useRecoilState } from "recoil";
-import { modalState, ModalProps } from "@/recoil/atoms";
+import { modalState } from "@/recoil/atoms";
+import { ModalProps } from "@/types";
 
 const useRecoilModal = () => {
   const [modals, setModals] = useRecoilState(modalState);

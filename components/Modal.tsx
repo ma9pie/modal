@@ -2,13 +2,9 @@
 
 import React from "react";
 import styled from "styled-components";
+import { ModalProps } from "@/types";
 
-type Props = {
-  close?: () => void;
-  component?: () => JSX.Element;
-};
-
-const Alert = ({ component, close }: Props) => {
+const Alert = ({ component, close }: ModalProps) => {
   return (
     <Wrapper>
       <Overlay onClick={close}></Overlay>

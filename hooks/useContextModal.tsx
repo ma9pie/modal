@@ -2,19 +2,7 @@
 
 import { useContext } from "react";
 import { ModalContext } from "@/components/ModalProvider";
-
-export type ModalProps = {
-  key?: string;
-  type?: string;
-  title?: string;
-  message?: string;
-  btnText?: string;
-  close?: () => void;
-  confirm?: () => void;
-  component?: () => JSX.Element;
-};
-
-export type Modals = Map<string, ModalProps>;
+import { ModalProps } from "@/types";
 
 const useContextModal = () => {
   const { modals, setModals } = useContext(ModalContext);

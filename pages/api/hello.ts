@@ -10,6 +10,6 @@ export default function handler(
   res: NextApiResponse<Data>,
   err: Error
 ) {
-  throw new Error();
+  // throw new Error();
   res.status(200).json({ name: "John Doe" });
 }

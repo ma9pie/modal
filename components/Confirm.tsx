@@ -2,15 +2,9 @@
 
 import React from "react";
 import styled from "styled-components";
+import { ModalProps } from "@/types";
 
-type Props = {
-  title?: string;
-  message?: string;
-  close?: () => void;
-  confirm?: () => void;
-};
-
-const Confirm = ({ title, message, close, confirm }: Props) => {
+const Confirm = ({ title, message, close, confirm }: ModalProps) => {
   return (
     <Wrapper>
       <Overlay onClick={close}></Overlay>
@@ -22,7 +16,14 @@ const Confirm = ({ title, message, close, confirm }: Props) => {
         <Message>{message}</Message>
         <BtnContainer>
           <CancelBtn onClick={close}>cancel</CancelBtn>
-          <ConfirmBtn onClick={confirm}>confirm</ConfirmBtn>
+          <ConfirmBtn
+            onClick={() => {
+              confirm && confirm();
+              close && close();
+            }}
+          >
+            confirm
+          </ConfirmBtn>
         </BtnContainer>
       </Content>
     </Wrapper>

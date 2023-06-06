@@ -1,7 +1,8 @@
 /* @/hooks/useReduxModal.tsx */
 
-import { modalActions, ModalProps } from "@/redux/modal";
+import { modalActions } from "@/redux/modal";
 import { useAppSelector, useAppDispatch } from "@/redux/hooks";
+import { ModalProps } from "@/types";
 
 const useReduxModal = () => {
   const dispatch = useAppDispatch();

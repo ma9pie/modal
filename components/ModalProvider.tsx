@@ -5,7 +5,7 @@ import React, { createContext, ReactNode, useState } from "react";
 import Alert from "@/components/Alert";
 import Confirm from "@/components/Confirm";
 import Modal from "@/components/Modal";
-import { ModalProps, Modals } from "@/hooks/useContextModal";
+import { ModalProps, Modals } from "@/types";
 
 type Props = {
   children: ReactNode;
